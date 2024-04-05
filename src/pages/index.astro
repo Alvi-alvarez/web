@@ -1,0 +1,131 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main transition:animate="slide">
+			<div class="terminal-frame">
+				<div class="terminal-nav">
+					<div class="terminal-tab">Terminal</div>
+				</div>
+				<div class="wrapper">
+					<p>Alvi@Alvarez:~$ neofetch</p>
+					<br />
+					<div class="terminal-data">
+						<div class="avatar"></div>
+						<div>
+							<p><b>Alvi</b>@<b>Alvarez</b></p>
+							<p>--------------</p>
+							<p><b>Name</b>: Santiago Alvarez</p>
+							<p><b>Country</b>: Uruguay</p>
+							<p><b>Job</b>: Programmer</p>
+							<p><b>Hobbies</b>: local llm, AI, code, gaming</p>
+							<p><b>Description</b>: I write code</p>
+						</div>
+					</div>
+					<br />
+					<p>Alvi@Alvarez:~$ <span class="pointer">|</span></p>
+				</div>
+			</div>
+		</main>
+		<Footer />
+		<style>
+			@keyframes pointer-anim {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			.pointer {
+				animation: pointer-anim 1s infinite;
+			}
+			.terminal-tab {
+				background-color: #0c0c0c;
+				width: fit-content;
+				padding: 0.5em 2em 0 1em;
+				position: absolute;
+				bottom: 0;
+				left: 8px;
+				line-height: 1;
+				border-top-left-radius: 12px;
+				border-top-right-radius: 12px;
+			}
+			.terminal-tab::after {
+				content: "✕";
+				position: absolute;
+				font-size: 12pt;
+				right: 12px;
+			}
+			.terminal-frame {
+				border: 1px solid var(--accent);
+				border-radius: 12px;
+				box-shadow: 0 0 70px #83f55530;
+				background-color: #0c0c0c;
+			}
+			.terminal-nav {
+				background: #2e2e2e;
+				width: 100%;
+				height: 40px;
+				display: block;
+				position: relative;
+				border-top-left-radius: 12px;
+				border-top-right-radius: 12px;
+			}
+			.terminal-nav::after {
+				content: "•••";
+				color: black;
+				font-size: 28pt;
+				line-height: 1;
+				position: absolute;
+				right: 12px;
+				top: 0;
+				bottom: 0;
+			}
+			.wrapper {
+				padding: 1em;
+			}
+			b {
+				color: var(--accent);
+				text-shadow: 0 0 20px #83f55591;
+			}
+			p {
+				margin: 0;
+			}
+			.avatar {
+				height: 200px;
+				width: 200px;
+				border-radius: 200px;
+				background-image: url("avatar.webp");
+				background-color: var(--accent);
+				background-size: cover;
+				box-shadow: 0 0 70px #82f5554b;
+			}
+			.terminal-data {
+				display: flex;
+				justify-content: center;
+				flex-direction: row;
+				align-items: center;
+				gap: 2rem;
+			}
+			@media (max-width: 720px) {
+				.terminal-data {
+					flex-direction: column;
+				}
+			}
+		</style>
+	</body>
+</html>
