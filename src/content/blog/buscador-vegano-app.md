@@ -2,7 +2,7 @@
 title: 'Buscador Vegano'
 description: 'Buscador Vegano fue una aplicación para Android y web que recomendaba los mejores lugares y emprendimientos veganos en Uruguay.'
 pubDate: 'May 16 2023'
-heroImage: '/buscador-vegano.webp'
+heroImage: 'buscador-vegano.webp'
 ---
 
 Buscador Vegano fue una aplicación para Android y web que recomendaba los mejores lugares y emprendimientos veganos en Uruguay.

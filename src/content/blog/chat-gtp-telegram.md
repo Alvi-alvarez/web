@@ -2,7 +2,7 @@
 title: 'Chat GTP Telegram'
 description: 'He creado un bot para utilizar ChatGPT en Telegram, y lo he alojado en AWS'
 pubDate: 'Apr 04 2023'
-heroImage: '/chatgpt-telegram.webp'
+heroImage: 'chatgpt-telegram.webp'
 ---
 
 **Update: 4/5/20204**
