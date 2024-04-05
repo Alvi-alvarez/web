@@ -1,2 +1,3 @@
 ## personal website.
-wp
+
+Based on Astro blog template - wp
